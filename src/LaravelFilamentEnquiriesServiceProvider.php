@@ -8,6 +8,8 @@ use Spatie\LaravelPackageTools\Package;
 
 class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
 {
+    public static string $name = 'laravel-filament-enquiries';
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -16,7 +18,6 @@ class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-filament-enquiries')
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_enquiries_table')
