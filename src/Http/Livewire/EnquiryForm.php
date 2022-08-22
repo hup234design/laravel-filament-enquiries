@@ -9,26 +9,30 @@ class EnquiryForm extends Component
 {
     public Enquiry $enquiry;
 
-    public function makeBlankEnquiry() {
+    public function makeBlankEnquiry()
+    {
         $this->enquiry = Enquiry::make();
     }
 
-    public function rules(){
+    public function rules()
+    {
         return [
-            'enquiry.name'      => 'required|string|max:255',
-            'enquiry.email'     => 'required|email|max:255',
+            'enquiry.name' => 'required|string|max:255',
+            'enquiry.email' => 'required|email|max:255',
             'enquiry.telephone' => 'nullable|string|max:255',
-            'enquiry.message'   => 'required|string',
+            'enquiry.message' => 'required|string',
         ];
     }
 
-    public function submit() {
+    public function submit()
+    {
         $this->validate();
         $this->enquiry->save();
         $this->makeBlankEnquiry();
     }
 
-    public function mount() {
+    public function mount()
+    {
         $this->makeBlankEnquiry();
     }
 
