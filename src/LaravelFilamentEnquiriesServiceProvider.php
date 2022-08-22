@@ -3,8 +3,8 @@
 namespace Hup234design\LaravelFilamentEnquiries;
 
 use Filament\PluginServiceProvider;
-use Spatie\LaravelPackageTools\Package;
 use Hup234design\LaravelFilamentEnquiries\Commands\PublishCommand;
+use Spatie\LaravelPackageTools\Package;
 
 class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
 {
