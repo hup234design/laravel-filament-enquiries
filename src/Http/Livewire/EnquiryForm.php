@@ -9,6 +9,8 @@ class EnquiryForm extends Component
 {
     public Enquiry $enquiry;
 
+    public bool $submitted = false;
+
     public function makeBlankEnquiry()
     {
         $this->enquiry = Enquiry::make();
@@ -28,12 +30,14 @@ class EnquiryForm extends Component
     {
         $this->validate();
         $this->enquiry->save();
+        $this->submitted = true;
         $this->makeBlankEnquiry();
     }
 
     public function mount()
     {
         $this->makeBlankEnquiry();
+        $this->submitted = false;
     }
 
     public function render()
