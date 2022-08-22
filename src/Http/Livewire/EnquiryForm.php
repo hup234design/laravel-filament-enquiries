@@ -8,6 +8,6 @@ class EnquiryForm extends Component
 {
     public function render()
     {
-        return view('laravel-filament-enquiries::enquiry-form');
+        return view('filament-enquiries::enquiry-form');
     }
 }
