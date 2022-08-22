@@ -4,6 +4,8 @@ namespace Hup234design\LaravelFilamentEnquiries;
 
 use Filament\PluginServiceProvider;
 use Hup234design\LaravelFilamentEnquiries\Commands\PublishCommand;
+use Hup234design\LaravelFilamentEnquiries\Http\Livewire\EnquiryForm;
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 
 class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
@@ -24,5 +26,11 @@ class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
             ->hasMigration('create_enquiries_table')
             ->hasCommand(PublishCommand::class)
             ->hasRoute('web');
+    }
+
+    public function boot(): void
+    {
+        parent::boot();
+        Livewire::component('enquiry-form', EnquiryForm::class);
     }
 }
