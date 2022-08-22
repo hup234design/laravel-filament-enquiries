@@ -15,7 +15,6 @@ class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        parent::configurePackage($package);
         $package
             ->name('laravel-filament-enquiries')
             ->hasConfigFile()
