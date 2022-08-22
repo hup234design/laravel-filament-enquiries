@@ -2,9 +2,9 @@
 
 namespace Hup234design\LaravelFilamentEnquiries\Tests;
 
+use Hup234design\LaravelFilamentEnquiries\LaravelFilamentEnquiriesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Hup234design\LaravelFilamentEnquiries\LaravelFilamentEnquiriesServiceProvider;
 
 class TestCase extends Orchestra
 {

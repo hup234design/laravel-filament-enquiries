@@ -2,9 +2,9 @@
 
 namespace Hup234design\LaravelFilamentEnquiries;
 
+use Hup234design\LaravelFilamentEnquiries\Commands\LaravelFilamentEnquiriesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Hup234design\LaravelFilamentEnquiries\Commands\LaravelFilamentEnquiriesCommand;
 
 class LaravelFilamentEnquiriesServiceProvider extends PackageServiceProvider
 {
