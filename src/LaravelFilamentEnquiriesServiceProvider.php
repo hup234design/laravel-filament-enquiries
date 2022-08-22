@@ -2,11 +2,11 @@
 
 namespace Hup234design\LaravelFilamentEnquiries;
 
+use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Hup234design\LaravelFilamentEnquiries\Commands\LaravelFilamentEnquiriesCommand;
+use Hup234design\LaravelFilamentEnquiries\Commands\PublishCommand;
 
-class LaravelFilamentEnquiriesServiceProvider extends PackageServiceProvider
+class LaravelFilamentEnquiriesServiceProvider extends PluginServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -19,7 +19,8 @@ class LaravelFilamentEnquiriesServiceProvider extends PackageServiceProvider
             ->name('laravel-filament-enquiries')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-filament-enquiries_table')
-            ->hasCommand(LaravelFilamentEnquiriesCommand::class);
+            ->hasMigration('create_enquiries_table')
+            ->hasCommand(PublishCommand::class)
+            ->hasRoute('web');
     }
 }

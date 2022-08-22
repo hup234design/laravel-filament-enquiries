@@ -8,11 +8,9 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('laravel_filament_enquiries_table', function (Blueprint $table) {
+        Schema::create('enquiries', function (Blueprint $table) {
             $table->id();
-
             // add fields
-
             $table->timestamps();
         });
     }
