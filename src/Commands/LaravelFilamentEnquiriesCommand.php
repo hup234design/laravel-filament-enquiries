@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Hup234design\LaravelFilamentEnquiries\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelFilamentEnquiriesCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-filament-enquiries';
 
     public $description = 'My command';
 

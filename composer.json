@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "hup234design/laravel-filament-enquiries",
+    "description": "Laravel Filament Plugin to manage enquiry/contact forms",
     "keywords": [
-        ":vendor_name",
+        "hup234design",
         "laravel",
-        ":package_slug"
+        "laravel-filament-enquiries"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/hup234design/laravel-filament-enquiries",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Dave Walker",
+            "email": "dave@hup234design.co.uk",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Hup234design\\LaravelFilamentEnquiries\\": "src",
+            "Hup234design\\LaravelFilamentEnquiries\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Hup234design\\LaravelFilamentEnquiries\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,15 +51,19 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Hup234design\\LaravelFilamentEnquiries\\LaravelFilamentEnquiriesServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelFilamentEnquiries": "Hup234design\\LaravelFilamentEnquiries\\Facades\\LaravelFilamentEnquiries"
             }
         }
     },

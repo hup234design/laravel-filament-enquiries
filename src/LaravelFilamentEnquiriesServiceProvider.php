@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Hup234design\LaravelFilamentEnquiries;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Hup234design\LaravelFilamentEnquiries\Commands\LaravelFilamentEnquiriesCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LaravelFilamentEnquiriesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('laravel-filament-enquiries')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_laravel-filament-enquiries_table')
+            ->hasCommand(LaravelFilamentEnquiriesCommand::class);
     }
 }
